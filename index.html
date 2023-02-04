@@ -20,29 +20,69 @@
 
       <div class="flex-header">
         <ul class="nav">
-          <li class="nav-list"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-list"><a href="about-me.html" class="nav-link">About Me</a></li>
-          <li class="nav-list"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-list">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-list">
+            <a href="#about-me" class="nav-link">About Me</a>
+          </li>
+          <li class="nav-list">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
         </ul>
       </div>
 
       <div class="flex-header">
-        <div class="dark mode">
-            <input type="checkbox" class="checkbox" id="checkbox" />
-            <label for="checkbox" class="label">
-              <i class="fa-solid fa-moon"></i>
-              <i class="fa-solid fa-sun"></i>
-              <div class="ball"></div>
-            </label>
+        <div class="dark-mode">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+            <div class="ball"></div>
+          </label>
         </div>
       </div>
     </header>
 
-    <main>
-      <section>
-        <p class="title">Sathanan Jeyakumar <br> <span class="sub-title">Portfolio</span></p>
+    <main id="home">
+      <div class="student">
+        <div class="main-content">
+          <p class="subtitle">Student</p>
+          <p class="content">
+            Hi i am a Student. At the moment i am visiting the KSB. I am in the
+            IMS and am in the seconde year.
+          </p>
+        </div>
+      </div>
+      <section class="main-pic">
+        <img
+          class="sathanan-pic"
+          src="img/Sathanan/Sathanan-start.png"
+          alt="Sathanan Jeyakumar"
+        />
       </section>
+
+      <div class="coder">
+        <div class="main-content">
+          <p class="subtitle">&lt;Coder&gt;</p>
+          <p class="content">
+            Hi i am a coder. I am learning at the moment Js, C#, ...
+          </p>
+        </div>
+      </div>
     </main>
+
+    <div id="about-me">
+      <div class="title">
+        <p>About <span>Me</span></p>
+      </div>
+    </div>
+
+    <div id="contact">
+      <div class="title">
+        <p>Contact<span>.</span></p>
+      </div>
+    </div>
 
     <footer>
       <p>

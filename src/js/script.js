@@ -1,7 +1,10 @@
 // header animation
+
+  
+
 window.onscroll = function() {
     var header = document.getElementById("header");
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset > 10) {
       header.style.top = "0";
     } else {
       header.style.top = "-100px";
