@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&family=Roboto+Slab&display=swap");
 
 :root {
   --primary-color: rgb(220, 211, 211);
   --secondary-color: #333;
   --black: #000;
   --white: #fff;
+  --bage: rgb(35, 35, 35);
+}
+
+.light-mode {
+  --secondary-color: rgb(245, 242, 242);
+  --primary-color: #333;
+  --white: #000;
+  --black: #fff;
+  --bage: rgb(245, 242, 242);
 }
 
 * {
@@ -12,11 +21,14 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-} 
+}
+
+/* scrolling */
 
 html {
   scrollbar-width: normal;
   scrollbar-color: #777 #555;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -35,15 +47,25 @@ html::-webkit-scrollbar-track {
   background-color: #555;
 }
 
+span {
+  color: rgb(241, 141, 11);
+}
+
 #logo {
   font-size: 2rem;
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   padding: 1rem;
+  text-decoration: none;
+  color: var(--white);
 }
 
 #logo:hover {
   cursor: pointer;
+}
 
+#logo span {
+  color: rgb(241, 141, 11);
+  font-family: "Monoton", cursive;
 }
 
 /* Styling for de Header */
@@ -118,77 +140,136 @@ header {
 .nav {
   display: flex;
   list-style: none;
-  color: #fff;
+  color: var(--white);
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: auto;
 }
 
 .nav-list {
-  color: #fff;
+  color: var(--white);
   padding: 2rem 3rem 2rem 3rem;
   font-size: 1.25rem;
 }
 
 .nav-link {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
-  position:relative;
+  position: relative;
   z-index: 1;
 }
 
 .nav-list a:hover {
   background-color: transparent;
-  
 }
 
 /* Styling the main */
 
+main {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+}
+
 #home {
   display: flex;
   flex-direction: row;
-  
+  width: 100%;
 }
 
 .student {
-  width: 50%;
+  width: 30%;
   background-color: var(--black);
   color: var(--white);
   flex-grow: 1;
+  border: none;
 }
 
 .coder {
-  width: 50%;
+  width: 30%;
   background-color: var(--black);
   color: var(--white);
   flex-grow: 1;
+  border: none;
 }
 
 section {
   background-color: var(--black);
-  flex-grow: 1;
-  width: 70%;
+  width: 40%;
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: end; 
 }
-
 
 .main-content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: auto;
+  width: 100%;
   flex-direction: column;
 }
 
 .subtitle {
   font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 .content {
-  margin: 2rem;
-  text-align: center
+  padding: 2rem;
+  text-align: center;
+}
+
+.sathanan-pic {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About Me & Contact */
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--bage);
+  color: var(--white);
+  width: 100%;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--bage);
+  color: var(--white);
+  width: 100%;
+}
+
+.title {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bage);
+  font-weight: bold;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--bage);
+  padding: 2rem;
+}
+
+/* smaller viewport */
+
+@media only screen and (max-width: 1500) {
+ 
+}
+
+@media only screen and (max-width: 1100px) {
+ 
+}
+
+@media only screen and (max-width: 900px) {
+
 }

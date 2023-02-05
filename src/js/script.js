@@ -1,7 +1,4 @@
 // header animation
-
-  
-
 window.onscroll = function() {
     var header = document.getElementById("header");
     if (window.pageYOffset > 10) {
@@ -12,9 +9,8 @@ window.onscroll = function() {
 };
 
 // Darkmode switch
-const checkbox = document.getElementById("checkboy");
-
-checkbox.addEventListener('change', () => {
-    // change the color
-
-})
+const label = document.getElementById("myLabel");
+      
+label.addEventListener("click", function() {
+  document.body.classList.toggle("light-mode");
+});
