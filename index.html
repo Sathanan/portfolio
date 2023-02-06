@@ -18,38 +18,40 @@
         <a href="#home" id="logo">S<span>J</span></a>
       </div>
 
+      <i class="fa-solid fa-bars" id="nav-menue"></i>
+
       <div class="flex-header zwei">
         <ul class="nav">
           <li class="nav-list">
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-list">
-            <a href="#about-me" class="nav-link">About Me</a>
+            <a href="#A" class="nav-link">About Me</a>
           </li>
           <li class="nav-list">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#S" class="nav-link"> My Skills</a>
+          </li>
+          <li class="nav-list">
+            <a href="#C" class="nav-link">Contact Me</a>
+          </li>
+          <li class="nav-list">
+            <div class="dark-mode">
+              <input type="checkbox" class="checkbox" id="checkbox" />
+              <label for="checkbox" class="label" id="myLabel">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
           </li>
         </ul>
-        <!-- <i class="fa-solid fa-bars" id="nav-menue"></i> -->
-      </div>
-
-      <div class="flex-header drei">
-        <div class="dark-mode">
-          <input type="checkbox" class="checkbox" id="checkbox" />
-          <label for="checkbox" class="label" id="myLabel">
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
-            <div class="ball"></div>
-          </label>
-        </div>
       </div>
     </header>
-
     <main id="home">
       <div class="student">
         <div class="main-content">
           <p class="subtitle">Student</p>
-          <p class="content">
+          <p class="description">
             Hi i am a Student. At the moment i am visiting the KSB. I am in the
             IMS and am in the seconde year.
           </p>
@@ -66,25 +68,116 @@
       <div class="coder">
         <div class="main-content">
           <p class="subtitle">&lt;Coder&gt;</p>
-          <p class="content">
+          <p class="description">
             Hi i am a coder. I am learning at the moment Js, C#, ...
           </p>
         </div>
       </div>
     </main>
-
-    <div id="about-me">
+    <div class="con-link" id="A"></div>
+    <div class="sub-link" id="about-me">
       <div class="title">
         <p>About <span>Me</span></p>
       </div>
-    </div>
-
-    <div id="contact">
+    <div class="con-link" id="S"></div>
+    <div class="sub-link" id="skills">
       <div class="title">
-        <p>Contact<span>.</span></p>
+        <p>My <span>Skills</span></p>
+      </div>
+      <div class="content-container">
+        <div class="content-text">
+          <p class="sub-head">Meine Skills & Kenntnisse</p>
+          <p class='content'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel iste nam, rerum unde, architecto dicta incidunt earum facere labore mollitia vitae voluptate voluptatum fugit cupiditate rem. Adipisci, reprehenderit. Magni natus, aut impedit mollitia provident earum. Eos tenetur magnam natus quam consequuntur magni itaque, totam inventore minima ab iure nemo. Sunt debitis doloremque asperiores quaerat, ipsam odio. Veritatis explicabo unde, vel voluptatum iusto repellendus aperiam officiis dolores nihil cumque veniam magnam voluptates at, perspiciatis ipsa id quasi nesciunt aspernatur mollitia pariatur asperiores earum! Eos odit numquam, voluptatum facilis incidunt perspiciatis quas repellendus minima quaerat id eum, fuga assumenda nulla porro! Esse!
+          </p>
+        </div>
+        <div class="content-extra">
+          <div class="bars">
+            <div class="info">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="line html"></div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>CSS
+              </span>
+              <span>60%</span>
+            </div>
+            <div class="line css"></div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>JS</span>
+              <span>40%</span>
+            </div>
+            <div class="line js"></div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>MySQL</span>
+              <span>70%</span>
+            </div>
+            <div class="line sql"></div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>C</span>
+              <span>50%</span>
+            </div>
+            <div class="line c"></div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>C#</span>
+              <span>20%</span>
+            </div>
+            <div class="line csharp"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="con-link" id="C"></div>
+    <div class="sub-link" id="contact">
+      <div class="title">
+        <p>Contact <span>Me</span></p>
+      </div>
+      <div class="respons-container">
+        <div id="contact-flex">
+          <div class="contact-container">
+            <i class="fa-solid fa-user icon"></i>
+            <div class="content-text-contact">
+              <p class="contact-sub-head">Name</p>
+              <p class='contact-content'>
+                Sathanan Jeyakumar
+              </p>
+            </div>
+          </div>
+          <div class="contact-container">
+            <i class="fa-solid fa-envelope icon"></i>
+            <div class="content-text-contact">
+              <p class="contact-sub-head">E-mail</p>
+              <p class='contact-content'>
+                <a href = "mailto: sathanan.jeyakumar@ksb-sg.ch" class="nav-link">sathanan.jeyakumar@ksb-sg.ch</a>
+              </p>
+            </div>
+          </div>
+          <div class="contact-container">
+            <i class="fa-brands fa-github icon"></i>
+            <div class="content-text-contact">
+              <p class="contact-sub-head">GitHub</p>
+              <p class='contact-content'>
+                <a href="https://github.com/Sathanan" target="_blank" class="nav-link">Go to my profile</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <footer></footer>
+    <footer>
+      <p>Copyright © | 2023 Sathanan Jeyakumar</p>
+    </footer>
   </body>
 </html>

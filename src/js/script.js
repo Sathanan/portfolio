@@ -14,3 +14,12 @@ const label = document.getElementById("myLabel");
 label.addEventListener("click", function() {
   document.body.classList.toggle("light-mode");
 });
+
+// Navigation bar
+
+const navBurger = document.getElementById('nav-menue');
+
+navBurger.onclick = function()  {
+  const navElement = document.querySelector('.zwei');
+  navElement.classList.toggle('active')
+}

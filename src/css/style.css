@@ -6,6 +6,7 @@
   --black: #000;
   --white: #fff;
   --bage: rgb(35, 35, 35);
+  --orange: rgb(241, 141, 11);
 }
 
 .light-mode {
@@ -13,7 +14,8 @@
   --primary-color: #333;
   --white: #000;
   --black: #fff;
-  --bage: rgb(245, 242, 242);
+  --bage: rgb(213, 208, 208);
+  --orange: rgb(241, 141, 11);
 }
 
 * {
@@ -48,7 +50,7 @@ html::-webkit-scrollbar-track {
 }
 
 span {
-  color: rgb(241, 141, 11);
+  color: var(--orange);
 }
 
 #logo {
@@ -57,15 +59,20 @@ span {
   padding: 1rem;
   text-decoration: none;
   color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
-#logo:hover {
-  cursor: pointer;
+#logo:hover span {
+  transform: translateY(-10px);
+  text-shadow: 2px 2px 2px #ffa500;
 }
 
 #logo span {
-  color: rgb(241, 141, 11);
+  color: var(--orange);
   font-family: "Monoton", cursive;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Styling for de Header */
@@ -127,7 +134,8 @@ header {
 }
 
 .dark-mode {
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 /* moving ball */
@@ -150,6 +158,7 @@ header {
   color: var(--white);
   padding: 2rem 3rem 2rem 3rem;
   font-size: 1.25rem;
+  position: relative;
 }
 
 .nav-link {
@@ -157,54 +166,63 @@ header {
   text-decoration: none;
   position: relative;
   z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
 
-.nav-list a:hover {
-  background-color: transparent;
+.nav-link:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #ffa500;
+  height: 2px;
+  width: 0%;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover:before {
+  width: 100%;
+}
+
+#nav-menue {
+  display: none;
 }
 
 /* Styling the main */
 
-main {
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
-}
-
 #home {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
   width: 100%;
+  height: 100vh;
 }
 
 .student {
-  width: 30%;
   background-color: var(--black);
-  color: var(--white);
-  flex-grow: 1;
+  color: var(--primary-color);
   border: none;
 }
 
 .coder {
-  width: 30%;
   background-color: var(--black);
-  color: var(--white);
-  flex-grow: 1;
+  color: var(--primary-color);
   border: none;
 }
 
 section {
   background-color: var(--black);
-  width: 40%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: end; 
+  align-items: end;
 }
 
 .main-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   flex-direction: column;
 }
@@ -215,9 +233,23 @@ section {
   font-weight: bold;
 }
 
-.content {
-  padding: 2rem;
+.sub-head {
+  font-weight: bold;
+  font-size: 1.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  padding: 0 2rem 2rem 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.content {
+  padding: 0 2rem 2rem 2rem;
+  text-align: initial;
+  color: var(--primary-color);
 }
 
 .sathanan-pic {
@@ -227,16 +259,7 @@ section {
 
 /* About Me & Contact */
 
-#about-me {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  background-color: var(--bage);
-  color: var(--white);
-  width: 100%;
-}
-
-#contact {
+.sub-link {
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -251,25 +274,334 @@ section {
   justify-content: center;
   background-color: var(--bage);
   font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* skill level */
+
+.bars {
+  margin-bottom: 15px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info span {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--orange);
+}
+
+.html {
+  width: 80%;
+  background: var(--orange);
+}
+.css {
+  width: 60%;
+  background: var(--orange);
+}
+.js {
+  width: 40%;
+  background: var(--orange);
+}
+.c {
+  width: 50%;
+  background: var(--orange);
+}
+.csharp {
+  width: 20%;
+  background: var(--orange);
+}
+.sql {
+  width: 70%;
+  background: var(--orange);
+}
+
+/* responsive content */
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.content-text {
+  width: 50%;
+}
+
+.content-extra {
+  width: 50%;
+}
+
+.con-link {
+  padding-bottom: 100px;
+  background-color: var(--bage);
+}
+
+/* contact me */
+
+.icon {
+  margin: 10px 0;
+  font-size: 25px;
+  color: var(--orange);
+}
+
+#contact-flex {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.contact-container {
+  display: flex;
+  height: 65px;
+}
+
+.content-text-contact {
+  margin-left: 30px;
+}
+
+.contact-sub-head {
+  font-weight: 500;
+}
+
+.contact-content {
+  color: var(--white);
 }
 
 /* footer */
 
 footer {
   background-color: var(--bage);
+  color: var(--white);
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
+
+/* about me */
 
 /* smaller viewport */
 
-@media only screen and (max-width: 1500) {
- 
+@media only screen and (max-width: 1100px) {
+  #contact-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .respons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
 
 @media only screen and (max-width: 1100px) {
- 
+  
+  #contact-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .respons-container {
+    display: flex;
+  }
+  
+  .sathanan-pic {
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .student {
+    background-color: var(--black);
+    color: var(--primary-color);
+    border: none;
+  }
+
+  .coder {
+    background-color: var(--black);
+    color: var(--primary-color);
+    border: none;
+  }
+
+  section {
+    background-color: var(--black);
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 900px) {
+  #nav-menue {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1rem;
+  }
 
+  .zwei {
+    height: 0px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .zwei ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    padding-bottom: 3rem;
+  }
+
+  /* if toggle is active */
+
+  .zwei.active {
+    height: 550px;
+  }
+
+  .zwei.active ul {
+    opacity: 1;
+  }
+
+  /* Startseite */
+  .sathanan-pic {
+    max-width: 23%;
+    height: auto;
+    margin: 30px 0 30px 0;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .student {
+    background-color: var(--black);
+    color: var(--primary-color);
+    border: none;
+  }
+
+  .coder {
+    background-color: var(--black);
+    color: var(--primary-color);
+    border: none;
+  }
+
+  section {
+    background-color: var(--black);
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .sathanan-pic {
+    max-width: 20%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* style from Skills */
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  #contact-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .content-text {
+    width: 100%;
+  }
+
+  .content-extra {
+    width: 100%;
+    margin: 2rem;
+    padding-right: 4rem;
+  }
+
+  .description {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sathanan-pic {
+    max-width: 35%;
+    height: auto;
+    object-fit: cover;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    opacity: 0;
+  }
 }
