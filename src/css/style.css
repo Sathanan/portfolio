@@ -249,8 +249,16 @@ section {
 
 .content {
   padding: 0 2rem 2rem 2rem;
-  text-align:start;
+  text-align: start;
   color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.content-about-me {
+  padding: 0 4rem 2rem 4rem;
+  text-align: start;
+  color: var(--primary-color);
+  font-size: 1.25rem;
 }
 
 .sathanan-pic {
@@ -420,7 +428,7 @@ section {
 }
 
 .contact-sub-head {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .contact-content {
@@ -429,12 +437,14 @@ section {
 
 /* footer */
 
-footer {
+.respons-footer {
   background-color: var(--bage);
   color: var(--white);
   padding: 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
 }
 
 /* smaller viewport */
@@ -534,7 +544,7 @@ footer {
   }
 
   /* about me */
-  
+
   .profile-pic {
     height: 15em;
     width: 15em;
@@ -543,7 +553,6 @@ footer {
     margin: 2rem;
     z-index: 0.1;
   }
-  
 }
 
 @media only screen and (max-width: 900px) {
@@ -676,6 +685,27 @@ footer {
     border-radius: 50%;
     margin: 2rem;
     z-index: 0.1;
+  }
+
+  /* footer */
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .respons-footer {
+    background-color: var(--bage);
+    color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .respons-footer p {
+    margin-bottom: 2rem;
   }
 }
 
